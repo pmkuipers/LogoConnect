@@ -1,0 +1,13 @@
+C:\Users\ramon\Documents\programeren\C#\LogoConnect-master\LogoConnectTest\bin\Debug\LogoConnectTest.exe.config
+C:\Users\ramon\Documents\programeren\C#\LogoConnect-master\LogoConnectTest\bin\Debug\LogoConnectTest.exe
+C:\Users\ramon\Documents\programeren\C#\LogoConnect-master\LogoConnectTest\bin\Debug\LogoConnectTest.pdb
+C:\Users\ramon\Documents\programeren\C#\LogoConnect-master\LogoConnectTest\bin\Debug\LogoConnect.dll
+C:\Users\ramon\Documents\programeren\C#\LogoConnect-master\LogoConnectTest\bin\Debug\LogoConnect.pdb
+C:\Users\ramon\Documents\programeren\C#\LogoConnect-master\LogoConnectTest\bin\Debug\LogoConnect.dll.config
+C:\Users\ramon\Documents\programeren\C#\LogoConnect-master\LogoConnectTest\obj\Debug\LogoConnectTest.csprojResolveAssemblyReference.cache
+C:\Users\ramon\Documents\programeren\C#\LogoConnect-master\LogoConnectTest\obj\Debug\LogoConnectTest.MainForm.resources
+C:\Users\ramon\Documents\programeren\C#\LogoConnect-master\LogoConnectTest\obj\Debug\LogoConnectTest.Properties.Resources.resources
+C:\Users\ramon\Documents\programeren\C#\LogoConnect-master\LogoConnectTest\obj\Debug\LogoConnectTest.csproj.GenerateResource.Cache
+C:\Users\ramon\Documents\programeren\C#\LogoConnect-master\LogoConnectTest\obj\Debug\LogoConnectTest.csproj.CoreCompileInputs.cache
+C:\Users\ramon\Documents\programeren\C#\LogoConnect-master\LogoConnectTest\obj\Debug\LogoConnectTest.exe
+C:\Users\ramon\Documents\programeren\C#\LogoConnect-master\LogoConnectTest\obj\Debug\LogoConnectTest.pdb

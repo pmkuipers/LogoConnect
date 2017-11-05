@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="LogoConnector.cs" />
+    <Compile Include="MemRead.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sharp7.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">

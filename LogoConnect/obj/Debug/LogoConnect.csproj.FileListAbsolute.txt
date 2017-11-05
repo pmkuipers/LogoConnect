@@ -1,0 +1,9 @@
+C:\Users\ramon\Documents\programeren\C#\LogoConnect-master\LogoConnect\bin\Debug\LogoConnect.dll.config
+C:\Users\ramon\Documents\programeren\C#\LogoConnect-master\LogoConnect\bin\Debug\LogoConnect.dll
+C:\Users\ramon\Documents\programeren\C#\LogoConnect-master\LogoConnect\bin\Debug\LogoConnect.pdb
+C:\Users\ramon\Documents\programeren\C#\LogoConnect-master\LogoConnect\obj\Debug\LogoConnect.csprojResolveAssemblyReference.cache
+C:\Users\ramon\Documents\programeren\C#\LogoConnect-master\LogoConnect\obj\Debug\LogoConnect.Properties.Resources.resources
+C:\Users\ramon\Documents\programeren\C#\LogoConnect-master\LogoConnect\obj\Debug\LogoConnect.csproj.GenerateResource.Cache
+C:\Users\ramon\Documents\programeren\C#\LogoConnect-master\LogoConnect\obj\Debug\LogoConnect.csproj.CoreCompileInputs.cache
+C:\Users\ramon\Documents\programeren\C#\LogoConnect-master\LogoConnect\obj\Debug\LogoConnect.dll
+C:\Users\ramon\Documents\programeren\C#\LogoConnect-master\LogoConnect\obj\Debug\LogoConnect.pdb

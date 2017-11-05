@@ -255,6 +255,10 @@ namespace LogoConnect
             if (error > 0) { throw new LogoCommunicationException(Client.ErrorText(error)); }
         }
 
+        public void Disconnect()
+        {
+            Client.Disconnect();
 
+        }
     }
 }
