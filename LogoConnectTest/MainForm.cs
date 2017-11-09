@@ -8,22 +8,26 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using LogoConnect;
+using System.Net.Sockets;
+using System.Net;
+using MemoryRead;
 
 namespace LogoConnectTest
 {
     public partial class MainForm : Form
     {
         LogoConnector Logo = new LogoConnector(LogoType.Logo8FS4);
+        Mem_Read Reader = new Mem_Read();
 
         public MainForm()
         {
             InitializeComponent();
         }
 
-        private void MainForm_Load(object sender, EventArgs e)
+        public void connect()
         {
             // Setup connection parameters
-            Logo.SetConnectionParams("192.168.0.10", 0x0300, 0x0200);
+            Logo.SetConnectionParams("192.168.1.10", 0x0300, 0x0200);
             // Attempt connection
             try
             {
@@ -36,13 +40,20 @@ namespace LogoConnectTest
             }
 
         }
+
         
+
 
         private void btReadNq1_Click(object sender, EventArgs e)
         {
+            connect();
+
+            Reader.Read_timer(true);
+
             try
             {
-                bool nq1 = Logo.ReadVBit(1, 0);
+
+                int nq1 = 1;
                 textBox1.Text = "NQ1 read as: " + nq1.ToString() + "\r\n" + textBox1.Text;
             }
             catch (LogoConnect.LogoCommunicationException x)
@@ -131,6 +142,19 @@ namespace LogoConnectTest
             {
                 // On communication error, show the message in a messagebox
                 MessageBox.Show(x.Message, "Communication error");
+            }
+        }
+
+        private void BT_DIS_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Logo.Disconnect();
+            }
+            catch (LogoCommunicationException x)
+            {
+
+                MessageBox.Show(x.Message, "Disconnection failed");
             }
         }
     }
