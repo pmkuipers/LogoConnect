@@ -21,6 +21,7 @@ namespace LogoConnect
     {
 
         protected Boolean LogoIsBigEndian = true;
+        protected int MemorySize = 851;
         protected Sharp7.S7Client Client = new Sharp7.S7Client();
         protected LogoType Type = LogoType.Unknown;
 
@@ -34,15 +35,18 @@ namespace LogoConnect
             // Adjust endinanness if it turns out to be different for different logos
             if(type == LogoType.Logo8FS4)
             {
-                LogoIsBigEndian = true; 
+                LogoIsBigEndian = true;
+                MemorySize = 851;
             }
             else if(type == LogoType.Logo0BA8)
             {
-                LogoIsBigEndian = true; 
+                LogoIsBigEndian = true;
+                MemorySize = 851;
             }
             else if (type == LogoType.Logo0BA7)
             {
                 LogoIsBigEndian = true; // VERIFY THIS
+                MemorySize = 851;
             }
         }
 
@@ -255,6 +259,58 @@ namespace LogoConnect
             if (error > 0) { throw new LogoCommunicationException(Client.ErrorText(error)); }
         }
 
+        /*
+        public LogoMemoryCache ReadMemory()
+        {
+            LogoMemoryCache cache = new LogoMemoryCache(MemorySize, this);
+            this.readMemoryCache(cache);
+            return cache;
+        }
+
+        /// <summary>
+        /// Read a byte from the LOGO's VB memory
+        /// </summary>
+        /// <param name="address">The VB address of the byte</param>
+        /// <returns>The value of the VB byte</returns>
+        /// <exception cref="LogoCommunicationException">When there is a communications error</exception>
+        internal readMemoryCache(LogoMemoryCache cache)
+        {
+            // Make sure the input values do not exceed max
+            if (address < 0) { address = 0; }
+
+            // Ensure a connection to the LOGO
+            Connect();
+
+            // Prepare a buffer to read into
+            byte[] buffer = new byte[1];
+            // Read the variable
+            int error = Client.ReadArea(Sharp7.S7Consts.S7AreaDB, 1, address, 1, Sharp7.S7Consts.S7WLByte, buffer);
+            // throw an exception if there is a communication error
+            if (error > 0) { throw new LogoCommunicationException(Client.ErrorText(error)); }
+
+            // Return the read byte
+            return buffer[0];
+        }
+        */
+    }
+
+    public class LogoMemoryCache
+    {
+        internal byte[] memory;
+        internal int memorySize = 851;
+        private LogoConnector connector;
+        internal LogoMemoryCache(int memorySize, LogoConnector connector)
+        {
+            this.memorySize = memorySize;
+            this.connector = connector;
+            memory = new byte[memorySize];
+        }
+
+
+
+
 
     }
+
+
 }
